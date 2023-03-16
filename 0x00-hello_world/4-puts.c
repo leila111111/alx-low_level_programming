@@ -7,7 +7,7 @@
  *
  *
  *
- * Return 0 if success
+ * Return: 0if success
  */
 int main(void)
 {

@@ -4,8 +4,8 @@
 
 int main(void)
 {
-	int max=120;
-	int count =0;
+	int max = 120;
+	int count = 0;
 	char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 	for (count = 0; count < max; count++)
 	{
@@ -14,7 +14,8 @@ int main(void)
 			putchar('\n');
 			break;
 		}
-		else putchar(message[count]);
+		else
+			putchar(message[count]);
 	}
-	return 1;
+	return (1);
 }

@@ -5,8 +5,10 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{	int i;
+{	
+	int i;
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	
 	for (i = 0; i < 26; i++)
 	{
 		putchar(alphabet[i]);

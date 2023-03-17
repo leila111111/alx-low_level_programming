@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-        int i;
-        char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 	char ALPHABET[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	for (i = 0; i < 26; i++)

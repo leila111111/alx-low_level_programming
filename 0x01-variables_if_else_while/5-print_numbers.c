@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-        int i;
-        char alphabet[] = "0123456789";
+	int i;
+	char alphabet[] = "0123456789";
 
 	for (i = 0; i < 10; i++)
 	{

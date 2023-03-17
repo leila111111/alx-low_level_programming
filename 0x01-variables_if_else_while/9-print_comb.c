@@ -8,13 +8,14 @@ int main(void)
 {
 	int i;
 	int j;
+
 	i = '0';
 	for (j = 0; j < 10; j++)
 	{
 		putchar(i);
-		if(j==9)
+		if (j == 9)
 		{
- 			break;
+			break;
 		}
 		putchar(',');
 		putchar(' ');

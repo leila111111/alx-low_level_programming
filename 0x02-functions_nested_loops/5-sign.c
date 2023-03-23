@@ -2,7 +2,7 @@
 /**
  * print_sign - function printing the sign of a number
  *@i: the number we will check
- *Return: 0 (if result equal to zero) 1 (if positive result) -1 (negative result)
+ *Return: 0 (if equal to zero) 1 (if positive) -1 (negative)
  */
 int print_sign(int i)
 {

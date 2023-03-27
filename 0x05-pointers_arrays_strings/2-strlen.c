@@ -5,11 +5,19 @@
  * _strlen - check the code
  *
  * @s: The parameter to enter
- * Return: len
+ * Return: i
  */
 int _strlen(char *s)
 {
-	return (strlen(s));
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+
 }
 
 

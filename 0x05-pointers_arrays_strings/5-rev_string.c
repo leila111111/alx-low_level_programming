@@ -20,7 +20,7 @@ void rev_string(char *s)
 	{
 		stock = s[j];
 		s[j] = s[i - 1];
-		s[i] = stock;
+		s[i - 1] = stock;
 		i = i - 1;
 	}
 }

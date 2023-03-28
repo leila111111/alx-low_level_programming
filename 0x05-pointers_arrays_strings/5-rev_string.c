@@ -16,7 +16,7 @@ void rev_string(char *s)
 	{
 		i++;
 	}
-	for (j = 0; j < i / 2; j++)
+	for (j = 0; j < i - 1; j++)
 	{
 		stock = s[j];
 		s[j] = s[i - 1];

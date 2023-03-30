@@ -2,7 +2,6 @@
 /**
  * cap_string - function that capitalizes all words of a string
  * @str: parameter
- *
  * Return: result
  */
 char *cap_string(char *str)
@@ -33,3 +32,4 @@ char *cap_string(char *str)
 		}
 	}
 	return (str);
+}

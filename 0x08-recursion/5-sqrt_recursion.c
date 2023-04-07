@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * _sqrt_recursion_iteration - function help to find square root
+ * _sqrt_recursion_iteration - function yo
  * @i: square root
  * @n:  number
  * Return: result

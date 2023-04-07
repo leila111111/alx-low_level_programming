@@ -13,9 +13,9 @@ int _sqrt_recursion(int n)
 
 /**
  * _sqrt_recursion_iteration - function help to find square root
- * @x: square root
+ * @i: square root
  * @n:  number
- * Return: int
+ * Return: result
  */
 
 int _sqrt_recursion_iteration(int n, int i)

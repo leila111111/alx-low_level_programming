@@ -4,7 +4,7 @@ int actual_prime(int n, int i);
 
 /**
  * is_prime_number - function that returns 1 if the input integer
- * @n: number 
+ * @n: number
  * Return: 1 if a prime number, 0 otherwise
  */
 int is_prime_number(int n)

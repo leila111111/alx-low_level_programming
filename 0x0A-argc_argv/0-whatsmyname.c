@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - Entry point
  *@argc: number of arguments
@@ -6,12 +6,7 @@
  * Return: Always 1 (Success)
  */
 int main(int argc, char *argv[])
-{	int i;
-
-	for (i = 0; argv[0][i] != '\0'; i++)
-	{
-		_putchar(argv[0][i]);
-	}
-	_putchar('\n');
+{
+	printf("%s\n", argv[0]);
 	return (0);
 }

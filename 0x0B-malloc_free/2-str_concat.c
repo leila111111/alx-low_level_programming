@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main"
 /**
  * str_concat - function that concatenates two strings
  * @s1: first pointer
@@ -7,35 +8,41 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, l, m = 0;
-	char *p;
-	while (s1 && s1[i])
-		i++;
-	while (s2 && s2[j])
-		j++;
-	p = (char *)malloc(i + j + 1);
-	if (p == 0)
+	char *s3;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
+
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+
+	s3 = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s3 == NULL)
 		return (NULL);
+
+	i = 0;
+	j = 0;
+
 	if (s1)
 	{
-		while (l < i)
+		while (i < len1)
 		{
-			p[l] = s1[l];
-			l++;
+			s3[i] = s1[i];
+			i++;
 		}
 	}
 
 	if (s2)
 	{
-		while (l < (i + j))
+		while (i < (len1 + len2))
 		{
-			p[l] = s2[m];
-			m++;
-			l++;
+			s3[i] = s2[j];
+			i++;
+			j++;
 		}
 	}
-	p[l] = '\0';
+	s3[i] = '\0';
 
-	return (p);
+	return (s3);
 }
 

@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 /**
- * print_all - prints anything
- * @format: list of types of arguments passed to the function
+ * print_all - print
+ * @format: arguments
  */
 void print_all(const char * const format, ...)
 {
@@ -19,13 +19,13 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", separator, va_arg(var, int));
+					printf("%s%c", s, va_arg(var, int));
 					break;
 				case 'i':
-					printf("%s%d", separator, va_arg(var, int));
+					printf("%s%d", s, va_arg(var, int));
 					break;
 				case 'f':
-					printf("%s%f", sep, va_arg(var, double));
+					printf("%s%f", s, va_arg(var, double));
 					break;
 				case 's':
 					s = va_arg(var, char *);

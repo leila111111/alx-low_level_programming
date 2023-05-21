@@ -18,8 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	fop = open(filename, O_RDONLY);
 	fre = read(fop, buf, letters);
-	fwr = write(STDOUT_FILENO, buf, fwr);
-	if (fop == -1 || fre == -1 || fwr == -1)
+	fwr = write(STDOUT_FILENO, buf, fre);
+	if (fop == -1 || fre == -1 || fwr == -1|| fwr != fre)
 	{
 		free(buf);
 		return (0);

@@ -10,7 +10,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int expo;
 	unsigned int count = 0;
-	
+
 	expo = n ^ m;
 	while (expo > 0)
 	{
@@ -18,5 +18,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		expo >>= 1;
 	}
 
-	return count;
+	return (count);
 }

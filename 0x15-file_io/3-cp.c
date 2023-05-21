@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 		print_error(argv[2], 99);
-	while ((bytes_read = read(fd_from, buffer, 1024)) > 0)
+	while ((bytes_read = read(fd_from, buffer, 1024)) != 0)
 	{
 		if (bytes_read == -1)
 			print_error(argv[1], 98);

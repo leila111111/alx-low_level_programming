@@ -7,19 +7,24 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int var;
-	int i ;
+	int i = 0, j;
+
 	if (n == 0)
 	{
 		printf("0");
 		return;
 	}
-	for (i = 0; i < sizeof(unsigned long int) * 8; i++)
+	var = n;
+	while (var !=0)
 	{
-		if ((n & var) != 0)
+		var = var >> 1;
+		i++;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		if ((n >> j) & 1)
 			printf("1");
 		else
 			printf("0");
-
-		var >>= 1;
 	}
 }

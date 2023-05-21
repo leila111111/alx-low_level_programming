@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	var = n;
-	while (var !=0)
+	while (var != 0)
 	{
 		var = var >> 1;
 		i++;

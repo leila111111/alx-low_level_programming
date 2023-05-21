@@ -1,45 +1,30 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- * read_textfile - function that reads a text file and prints it to
- * the POSIX standard output
- * @filename: pointer to character "file to read from"
- * @letters: number of letters that should be read and printed
- * Return: 0 if the file doesn't exist, can't be opened or the
- * writing process fails
- * else the number of bytes read is returned
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the function should read and print.
+ * Return: If the function fails or filename is NULL - 0.
+ * or  number of bytes the function can read and print.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *stock;
-	int fo;
-	ssize_t fr, fw;
-
+	ssize_t fop, fre, fwr;
+	char *buf;
 	if (filename == NULL)
 		return (0);
-	stock = malloc(sizeof(char) * letters);
-	if (stock == NULL)
+	buf = malloc(sizeof(char) * letters);
+	if (buf == NULL)
 		return (0);
-	fo = open(filename, O_RDONLY);
-	if (fo == -1)
+	fop = open(filename, O_RDONLY);
+	fre = read(fop, buf, letters);
+	fwr = write(STDOUT_FILENO, buf, fwr);
+	if (fop == -1 || fre == -1 || fwr == -1)
 	{
-		free(stock);
+		free(buf);
 		return (0);
 	}
-	fr = read(fo, stock, letters);
-	if (fr == -1)
-	{
-		free(stock);
-		close(fo);
-		return (0);
-	}
-	fw = write(STDOUT_FILENO, stock, fr);
-	if (fw == -1)
-	{
-		free(stock);
-		close(fo);
-		return (0);
-	}
-	free(stock);
-	close(fo);
-	return (fr);
+	free(buf);
+	close(fop);
+	return (fwr);
 }

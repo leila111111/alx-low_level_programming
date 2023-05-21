@@ -7,12 +7,12 @@
  */
 void print_error(char *file, int i)
 {
-	if(i==98)
+	if(i == 98)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 		exit(98);
 	}
-	if(i==99)
+	if(i == 99)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);

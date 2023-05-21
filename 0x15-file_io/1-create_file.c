@@ -1,17 +1,22 @@
 #include "main.h"
 /**
- * create_file - creates a file.
- * @filename: the file to create.
- * @text_content: the string to be written to the file.
- * Return: 1 or -1 if fails.
+ * str_len - compute the length.
+ * @s: string
+ * Return: a
  */
-int _strlen(const char *s)
+int str_len(const char *s)
 {
 	int a = 0;
 	while (s[a] != '\0')
 		a++;
 	return (a);
 }
+/**
+ * create_file - creates a file.
+ * @filename: the file to create.
+ * @text_content: the string to be written to the file.
+ * Return: 1 or -1 if fails.
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
@@ -25,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content != NULL)
 	{
-		bytes_written = write(fd, text_content, strlen(text_content));
+		bytes_written = write(fd, text_content, str_len(text_content));
 		if (bytes_written == -1)
 		{
 			close(fd);

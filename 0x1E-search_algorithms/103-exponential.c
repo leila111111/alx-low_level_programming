@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search - function that searches for a value in a sorted array
+ * binary_search_other - function that searches for a value in a sorted array
  * @array: pointer to the first element of the array to search in
  * @left: left index
  * @right: right index

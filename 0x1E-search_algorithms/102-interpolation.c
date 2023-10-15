@@ -34,6 +34,8 @@ int interpolation_search(int *array, size_t size, int value)
 			j = i + 1;
 		if (array[i] > value)
 			k = i - 1;
+        if (k == j)
+			break;
 	}
 	return (-1);
 }
